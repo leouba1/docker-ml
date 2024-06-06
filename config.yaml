@@ -1,0 +1,11 @@
+experiment_name: "cloud-docker-test"
+source_directory: "src"
+script: "training/train.py"
+arguments:
+  - "--data_path"
+  - "/data"
+  - "--output_path"
+  - "./outputs"
+dataset_name: "titanic_train_dataset"
+acr_name: "<your_acr_name>"
+image_name: "azureml-local-test"

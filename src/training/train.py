@@ -1,5 +1,4 @@
 import argparse
-import os
 import pandas as pd
 from pathlib import Path
 import sys
@@ -9,7 +8,7 @@ from sklearn.metrics import accuracy_score
 from azureml.core import Run
 
 sys.path.append(str(Path(__file__).parents[1]))
-from data.data_manager import load_data
+from utils.data_utils import load_data
 
 def train(data, output_path):
     X_train, X_test, y_train, y_test = load_data(data)
